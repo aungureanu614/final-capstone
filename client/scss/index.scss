@@ -1,0 +1,196 @@
+body {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    color: #191414;
+    font-size: 62.5%;
+    font-family: 'Arimo', sans-serif;
+    background-color: black;
+    position:relative;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1{
+	text-align: center;
+	padding: 3%;
+	color: rgb(29, 185, 84);
+	font-size: 8rem;
+	letter-spacing: 12px;
+	font-weight: bold;
+}
+
+.center-style{
+	
+	margin-top: 4%;
+	clear:both;
+	padding-bottom: 2%;
+
+}
+
+.center-style img{
+	
+	width: 60%;
+	height: 50rem;
+}
+
+.center-style > p{
+	color: white;
+	font-size: 3rem;
+    float: right;
+    width: 37%;
+    text-align: center;
+    padding-top: 10rem;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 4px;
+}
+
+.navbar{
+	background-color: mintcream;
+}
+
+a{
+    text-decoration: underline;
+}
+
+nav li{
+	font-size: 3rem; 
+	padding-left: 30rem;
+
+}
+
+form{
+	font-size: 3rem;
+    padding: 4rem;
+    text-align: center;
+}
+
+.artist-input{
+	padding: 1rem;
+    width: 40%;
+    background: transparent;
+    color: #AFB5BB;
+    border-radius: 3rem;
+    outline: none;
+}
+
+.submit{
+	background-color: rgb(29, 185, 84);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-left: 1rem;
+    outline: none;
+}
+
+.search-artist{
+	padding: 3%;
+    text-align: center
+}
+
+.search-artist img{
+	width: 50rem;
+    height: 40rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.search-artist p{
+	color: white;
+    font-size: 3rem;
+
+    
+}
+
+.related-artists{
+	padding: 3%;
+    text-align: center
+}
+
+.related-artists img{
+	width: 50rem;
+    height: 40rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.related-artists p{
+	color: white;
+    font-size: 3rem;
+}
+
+iframe{
+	width: 50rem;
+	
+}
+
+.dropdown-menu{
+    width: 25rem;
+    margin: 0 auto;
+}
+.dropdown-menu li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+}
+.dropdown-menu li:hover {
+    background-color: #D3D3D3;
+    cursor: pointer;
+}
+
+.dropdown.open {
+    width: 25rem;
+    margin: 0 auto;
+}
+
+.btn-success{
+    width: 25rem;
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: 4%;
+    height: 10rem;
+    background-color: #3e3436;
+
+}
+
+.contact{
+ 
+    font-size: 1.5rem;
+    color: beige;
+    font-family: "Righteous";
+    text-align: center;
+    margin: 0 auto;
+}
+
+.created-by{
+    padding: 1rem;
+
+}
+
+.portfolio-link{
+    text-decoration: none;
+     color: inherit;
+}
+
+.portfolio-link:hover{
+    color: lightblue;
+    text-decoration: none;
+}
+
+
+.fa{
+    padding: 1%;
+    background: beige;
+    border-radius: 50%;
+    color: saddlebrown;
+}
+
+
