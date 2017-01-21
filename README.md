@@ -1,78 +1,47 @@
-# Thinkful Full Stack Template
+# Artist Finder (Extension)
+Thinkful (https://www.thinkful.com) Final Capstone 
 
-A template for developing and deploying Javascript apps using the Mongo-Express-React-Node (MERN) stack.  Supports ES2015 on the client and server-side.
+![Screenshot](https://snag.gy/A9wZuv.jpg)
 
-## Getting started
+##Background
 
-### Setting up a project
+This is an extension of Artist Finder. It includes the feature of being able to rate the searched artist's playlist and see an average rating based on other user's rating of the playlist. 
 
-* Move into your projects directory: `cd ~/YOUR_PROJECTS_DIRECTORY`
-* Clone this repository: `git clone https://github.com/oampo/thinkful-full-stack-template YOUR_PROJECT_NAME`
-* Move into the project directory: `cd YOUR_PROJECT_NAME`
-* Install the dependencies: `npm install`
-* Create a new repo on GitHub: https://github.com/new
-    * Make sure the "Initialize this repository with a README" option is left **un**checked
-* Update the remote to point to your GitHub repository: `git remote set-url origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME`
+##Use Case
 
-### Working on the project
+Why is this app useful? Spotify doesn't currently offer the option of rating a playlist and seeing average ratings from other users. It's nice to have a way of seeing what others thought of the compilation of tracks
 
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Run the development task: `npm run dev`
-    * Starts a server running at http://localhost:8080
-    * Automatically rebuilds when any of your files change
+##Working Prototype
 
-## Directory layout
+You can access a working prototype of the app here: https://lit-wave-43289.herokuapp.com/#/
 
-```
-.
-├── client              Client-side code
-│   ├── assets          Images, videos, etc.
-│   ├── js              JavaScript
-│   │   ├── actions     Redux actions
-│   │   ├── components  React components
-│   │   └── reducers    Redux reducers
-│   └── scss            SASS stylesheets
-├── server              Server-side code
-│   └── models          Mongoose schemas 
-└── test                Tests
-    ├── client          Client tests
-    └── server          Server tests
-```
+##Functionality
+The app's functionality includes:
 
-## Deployment
+* Searching for an artist
+* Playing a top 10 track list for the searched artist
+* Playing a top 10 track list for 5 artists that are related to the searched artist
+* Rating the searched artist's playlist
 
-Requires the [Heroku CLI client](https://devcenter.heroku.com/articles/heroku-command-line).
+##Technical
 
-### Setting up the project on Heroku
+The app is built using:
 
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Create the Heroku app: `heroku create PROJECT_NAME`
-* Instruct Heroku to install the development dependencies: `heroku config:set NPM_CONFIG_PRODUCTION=false`
+* Node.js
+* React
+* JSX
+* CSS
+* MongoDB
+* Mongoose
+* Spotify API
 
-### Deploying to Heroku
+##Development Roadmap
 
-* Push your code to Heroku: `git push heroku master`
+Future features to be added to the app are:
 
-## Continuous Integration
+* A user login page
+* Ratings for each related artist's playlist
+* Star ratings rather than 1-5 for better visual effect
+* Being able to save playlists
 
-* Add your repository to [Travis CI](https://travis-ci.org/)
-
-## Continuous Deployment
-
-Requires the [Travis CLI client](https://github.com/travis-ci/travis.rb).
-
-### Setting up CD
-
-* Add the following configuration to `.travis.yml`:
-
-    ```
-    deploy:
-      provider: heroku
-      app: YOUR_HEROKU_APP_NAME
-    ```
-* Add your Heroku API key: `travis encrypt $(heroku auth:token) --add deploy.api_key`
-
-### Deploying using CD
-
-* Push your code to GitHub: `git push origin master`
 
