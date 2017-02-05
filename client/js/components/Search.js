@@ -17,28 +17,31 @@ var Search = React.createClass({
 	},
 
 	submitRating: function(rating){
-		// var ratingArr = [];
-		// ratingArr.push(rating);
-
+		
 		this.props.dispatch(actions.addRating(this.props.artistInfo.name, rating));
+		this.props.dispatch(actions.getRating(this.props.artistInfo.name));
+
 	},
 	getRating: function(artist){
-		
+			
 			
 			if(artist.rating.length===0){
 				return (
 						<p>Playlist not yet rated</p>
 					)
 			}else{
+				
 				var add = artist.rating.reduce(function(sum, score){
+					
 					return sum + score;
 				},0)
 				
-				var avg = (add/artist.rating.length).toFixed(2);
+				var avg = (add/artist.rating.length).toFixed(1);
+			
 				return (
-						<p>Playlist Rating: {avg}/5.00</p>
+						<p>Playlist Rating: {avg}/5.0</p>
 					)
-				// return add / artist.rating.length;
+				// calculate average rating
 			}
 		
 	},
@@ -46,6 +49,7 @@ var Search = React.createClass({
     searchedArtist: function(artist){
     	
     	if(artist.name != null && artist.name != "Artist does not exist, try again"){
+
     		var tracks = [];
     		for(var i=0;i<artist.tracks.length;i++){
     			tracks.push(artist.tracks[i].id)
@@ -59,7 +63,7 @@ var Search = React.createClass({
     				<iframe src={'https://embed.spotify.com/?uri=spotify:trackset:Top 10 Playlist:' + tracks.join(',')} 
 				 	frameBorder="0" allowTransparency="true"></iframe>
 					
-					{this.getRating(this.props.artistInfo)}					 
+						{this.getRating(this.props.artistInfo)}				 
 
 				 	<div className="dropdown">
   						<button className="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Rate {artist.name} Playlist

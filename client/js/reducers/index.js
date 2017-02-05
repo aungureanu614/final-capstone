@@ -17,7 +17,6 @@ var appReducer = function(state, action){
 
 	if(action.type === actions.TOP_TRACKS_SUCCESS){
 	
-
 		return Object.assign({}, state, {name: action.name}, {id: action.id}, {image: action.image}, 
 			{tracks: action.tracks})
 	}
@@ -30,8 +29,8 @@ var appReducer = function(state, action){
 		return Object.assign({}, state, {relatedArtists: recs});
 		
 	}else if(action.type === actions.GET_RATING_SUCCESS){
-		var score = state.rating.concat(action.rating);
-		return Object.assign({}, state, {rating: score});
+
+		return Object.assign({}, state, {rating: action.rating}); 
 		
 	}
 
