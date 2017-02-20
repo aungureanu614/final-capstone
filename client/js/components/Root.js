@@ -2,32 +2,18 @@ var React = require('react');
 var Header = require('./Header');
 
 var Root = React.createClass({
-	
+	//entry point for routes
 	render: function(){
 	return(
-		<div>
-			<div className="container">
-				<div className="row">
-					<div className="col-m-10 col-offset-1">
-						<h1>Artist Finder</h1>
-					</div>
-				</div>
+		<div className="title">
+			<h1 className="app-title">Artist Finder</h1>
+					
+			<div className="header">
+				<Header />
 			</div>
-			<div className="container">
-				<div className="row">
-					<div className="col-m-10 col-offset-1">
-						<Header />
-					</div>
-				</div>
+			<div className="children">
+				{this.props.children}
 			</div>
-			<div className="container">
-				<div className="row">
-					<div className="col-m-10 col-offset-1">
-						{this.props.children}
-					</div>
-				</div>
-			</div>
-
 		</div>
 		);
 	}

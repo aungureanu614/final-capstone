@@ -1,3 +1,5 @@
+@import 'normalize.scss';
+
 body {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -6,6 +8,7 @@ body {
     font-family: 'Arimo', sans-serif;
     background-color: black;
     position:relative;
+    margin: 5% 0;
 }
 
 *,
@@ -14,57 +17,73 @@ body {
     box-sizing: inherit;
 }
 
-h1{
-	text-align: center;
-	padding: 3%;
-	color: rgb(29, 185, 84);
-	font-size: 8rem;
-	letter-spacing: 12px;
-	font-weight: bold;
-}
-
-.center-style{
-	
-	margin-top: 4%;
-	clear:both;
-	padding-bottom: 2%;
-
-}
-
-.center-style img{
-	
-	width: 60%;
-	height: 50rem;
-}
-
-.center-style > p{
-	color: white;
-	font-size: 3rem;
-    float: right;
-    width: 37%;
+.app-title {
+    width: 75%;
+    margin: 0 auto;
     text-align: center;
-    padding-top: 10rem;
-    font-family: 'Quicksand', sans-serif;
-    letter-spacing: 4px;
+    padding: 3% 0;
+    color: rgb(29, 185, 84);
+    font-size: 6rem;
+    letter-spacing: 10px;
+    font-weight: bold;
 }
 
-.navbar{
-	background-color: mintcream;
+.center-style > p {
+    width: 50%;
+    float: right;
+    color: white;
+    padding: 10% 2%;
+    font-size: 1.5rem;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+}
+
+.header {
+    padding: 2% 0;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+.center-style {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.navbar-top {
+    background-color: mintcream;
+    width: 75%;
+    margin: 0 auto;
+    padding: 2%;
+    border-radius: 9px;
+}
+
+.center-style img {
+    width: 50%;
+    height: 20rem;
 }
 
 a{
     text-decoration: underline;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: gray;
 }
 
 nav li{
-	font-size: 3rem; 
-	padding-left: 30rem;
-
+	font-size: 1.5rem; 
+	
 }
 
-form{
-	font-size: 3rem;
-    padding: 4rem;
+form {
+    font-size: 1.5rem;
+    padding: 4rem 0;
     text-align: center;
 }
 
@@ -84,43 +103,48 @@ form{
     padding: 1rem;
     margin-left: 1rem;
     outline: none;
+    font-weight: bold;
 }
 
-.search-artist{
-	padding: 3%;
-    text-align: center
+.search-artist {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
 }
 
-.search-artist img{
-	width: 50rem;
+.search-artist img {
+    width: 50rem;
     height: 40rem;
     display: block;
     margin: 0 auto;
 }
 
-.search-artist p{
-	color: white;
-    font-size: 3rem;
-
-    
+.search-artist p {
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 2%;
 }
 
-.related-artists{
-	padding: 3%;
-    text-align: center
+.related-artists {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
 }
 
-.related-artists img{
-	width: 50rem;
+.related-artists img {
+    width: 50rem;
     height: 40rem;
     display: block;
     margin: 0 auto;
 }
 
-.related-artists p{
-	color: white;
-    font-size: 3rem;
+.related-artists p {
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 2%;
+    margin-top: 15%;
 }
+
 
 iframe{
 	width: 50rem;
@@ -128,8 +152,9 @@ iframe{
 }
 
 .dropdown-menu{
-    width: 25rem;
+    width: 10rem;
     margin: 0 auto;
+
 }
 .dropdown-menu li {
     color: black;
@@ -145,24 +170,23 @@ iframe{
 }
 
 .dropdown.open {
-    width: 25rem;
+    width: 10rem;
     margin: 0 auto;
 }
 
 .btn-success{
-    width: 25rem;
+    width: 10rem;
     margin: 0 auto;
 }
 
 footer {
-    margin-top: 4%;
-    height: 10rem;
+    margin: 2% 0;
+    height: 7rem;
     background-color: #3e3436;
-
+    border-radius: 9px;
 }
 
-.contact{
- 
+.contact {
     font-size: 1.5rem;
     color: beige;
     font-family: "Righteous";
@@ -170,27 +194,82 @@ footer {
     margin: 0 auto;
 }
 
-.created-by{
-    padding: 1rem;
-
+.created-by {
+    padding: 1rem 0;
+    font-size: 1rem;
 }
 
-.portfolio-link{
+.portfolio-link {
+    text-decoration: underline;
+    color: inherit;
+    font-size: 1rem;
+}
+
+.portfolio-link:hover {
     text-decoration: none;
-     color: inherit;
 }
 
-.portfolio-link:hover{
-    color: lightblue;
-    text-decoration: none;
-}
-
-
-.fa{
+.fa {
     padding: 1%;
     background: beige;
     border-radius: 50%;
     color: saddlebrown;
+}
+
+@media only screen and (max-width: 500px) {
+    .app-title {
+        font-size: 3rem;
+    }
+    .center-style img {
+        height: 15rem;
+    }
+    .center-style > p {
+        font-size: 1.2rem;
+    }
+    .navbar-top {
+        padding: 4%;
+    }
+    .nav-top {
+        font-size: 1rem;
+    }
+    .header {
+        margin: 6% 0;
+    }
+    footer {
+        height: 6rem;
+        margin: 6% 0;
+    }
+    form {
+        font-size: 1rem;
+        padding: 2rem 0;
+    }
+    .artist-input {
+        padding: .5rem;
+        width: 50%;
+    }
+    .submit {
+        border-radius: 1rem;
+        padding: .7rem;
+        margin-left: .5rem;
+    }
+    .search-artist{
+        width: 75%;
+    }
+    .related-artists{
+        width: 75%;
+    }
+    .search-artist img{
+        height: 15rem;
+    }
+    .search-artist p {
+        font-size: 1.5rem;
+    }
+    .related-artists img{
+        height: 15rem;
+    }
+    .related-artists p {
+        font-size: 1.5rem;
+    }
 }
 
 
