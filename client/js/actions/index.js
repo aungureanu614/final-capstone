@@ -1,6 +1,4 @@
 // var isomorphicFetch = require('isomorphic-fetch');
-
-
 var GET_RELATED_SUCCESS = "GET_RELATED_SUCCESS";
 var getRelatedSuccess = function(artist) {
     return {
@@ -56,7 +54,13 @@ var getRatingSuccess = function(ratingArr){
 var getArtistId = function(artistName) {
     return function(dispatch) {
         var url = 'https://api.spotify.com/v1/search?q=' + artistName + '&type=artist';
-        return fetch(url).then(function(response) {
+
+        const headers = new Headers();
+        headers.append('Authorization', 'Bearer BQBtevz7LumfOK4lDuEnwUMoC1aMvLi2THUdGpSZraY6_ZHe3E1Trj-rDzHJTSb5aunqoQ35gZ8mQ1nR2rVQOHNCcYUIoi9Y-Vc63ri27swttapIn9WRiQK729sSwZRyf_vHywK5-fUjnCJ6SzdO5-HqzY1DFlufHQ');
+
+        return fetch(url, {
+            headers
+        }).then(function(response) {
 
                 if (response.status < 200 || response.status >= 300) {
                     var error = new Error(response.statusText)
@@ -88,7 +92,13 @@ var getArtistId = function(artistName) {
 var getArtistSongs = function(artistName, artistId, artistImg) {
     return function(dispatch) {
         var url = 'https://api.spotify.com/v1/artists/' + artistId + '/top-tracks?country=US';
-        return fetch(url).then(function(response) {
+
+        const headers = new Headers();
+        headers.append('Authorization', 'Bearer: BQBtevz7LumfOK4lDuEnwUMoC1aMvLi2THUdGpSZraY6_ZHe3E1Trj-rDzHJTSb5aunqoQ35gZ8mQ1nR2rVQOHNCcYUIoi9Y-Vc63ri27swttapIn9WRiQK729sSwZRyf_vHywK5-fUjnCJ6SzdO5-HqzY1DFlufHQ');
+
+        return fetch(url, {
+            headers
+        }).then(function(response) {
 
                 if (response.status < 200 || response.status >= 300) {
                     var error = new Error(response.statusText)
