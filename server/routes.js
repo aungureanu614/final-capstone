@@ -43,13 +43,13 @@ router.get('/refreshToken/:token', (req, res) => {
   const body = {
     grant_type: 'refresh_token',
     refresh_token: req.params.token
-  }
+  };
 
   const authKey = Buffer.from(`${auth.CLIENT_ID}:${auth.CLIENT_SECRET}`).toString('base64');
 
   const headers = {
     'Authorization': `Basic ${authKey}`
-  }
+  };
 
   request.post({
     url: 'https://accounts.spotify.com/api/token',
