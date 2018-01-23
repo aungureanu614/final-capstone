@@ -20,11 +20,11 @@ To start the development server:
 
 Changes will automatically refresh the server.
 
-##Working Prototype
+## Working Prototype
 
 You can access a working prototype of the app here: https://lit-wave-43289.herokuapp.com/#/
 
-##Functionality
+## Functionality
 The app's functionality includes:
 
 * Searching for an artist
@@ -32,7 +32,7 @@ The app's functionality includes:
 * Playing a top 10 track list for 5 artists that are related to the searched artist
 * Rating the searched artist's playlist
 
-##Technical
+## Technical
 
 The app is built using:
 
@@ -44,7 +44,7 @@ The app is built using:
 * Mongoose
 * Spotify API
 
-##Development Roadmap
+## Development Roadmap
 
 Future features to be added to the app are:
 
