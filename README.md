@@ -11,11 +11,20 @@ This is an extension of Artist Finder. It includes the feature of being able to 
 
 Why is this app useful? Spotify doesn't currently offer the option of rating a playlist and seeing average ratings from other users. It's nice to have a way of seeing what others thought of the compilation of tracks
 
-##Working Prototype
+## Getting started
+`npm install`
+
+To start the development server:
+
+`npm run dev`
+
+Changes will automatically refresh the server.
+
+## Working Prototype
 
 You can access a working prototype of the app here: https://lit-wave-43289.herokuapp.com/#/
 
-##Functionality
+## Functionality
 The app's functionality includes:
 
 * Searching for an artist
@@ -23,7 +32,7 @@ The app's functionality includes:
 * Playing a top 10 track list for 5 artists that are related to the searched artist
 * Rating the searched artist's playlist
 
-##Technical
+## Technical
 
 The app is built using:
 
@@ -35,7 +44,7 @@ The app is built using:
 * Mongoose
 * Spotify API
 
-##Development Roadmap
+## Development Roadmap
 
 Future features to be added to the app are:
 
