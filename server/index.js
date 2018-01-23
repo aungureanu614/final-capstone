@@ -7,12 +7,13 @@ var Record = require("./models/record");
 
 const request = require('request');
 var querystring = require('querystring');
+const keys = require('./keys.json');
 
 var app = express();
 
 const REDIRECT_URI = 'http://localhost:8080/callback';
-const CLIENT_ID = 'c8f854adc72e47de8a412d4ddbbcc351';
-const CLIENT_SECRET = 'b78a2cff9ea7439fb85fb09df8d481ee';
+const CLIENT_ID = keys.client_id;
+const CLIENT_SECRET = keys.client_secret;
 
 app.use(bodyParser.json());
 
