@@ -34,7 +34,7 @@ router.get('/rating/:name', (req, res) => {
 
 // Get access token
 router.get('/login', (req, res) => {
-  const url = `https://accounts.spotify.com/authorize?response_type=code&client_id=${auth.CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`;
+  const url = `https://accounts.spotify.com/authorize?response_type=code&client_id=${auth.CLIENT_ID}&redirect_uri=${encodeURIComponent(auth.REDIRECT_URI)}`;
   res.redirect(url);
 });
 
