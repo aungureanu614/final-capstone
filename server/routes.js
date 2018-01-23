@@ -66,9 +66,9 @@ router.get('/callback', (req, res) => {
   const body = {
     grant_type: 'authorization_code',
     code: req.query.code,
-    redirect_uri: REDIRECT_URI,
-    client_id: CLIENT_ID,
-    client_secret: CLIENT_SECRET
+    redirect_uri: auth.REDIRECT_URI,
+    client_id: auth.CLIENT_ID,
+    client_secret: auth.CLIENT_SECRET
   };
 
   request.post({
