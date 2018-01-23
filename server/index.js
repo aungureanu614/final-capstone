@@ -6,6 +6,7 @@ var config = require("./config");
 var Record = require("./models/record");
 
 const request = require('request');
+var querystring = require('querystring');
 
 var app = express();
 
@@ -61,10 +62,12 @@ app.get('/callback', function(req, res) {
 
 
   request.post({
-    url: 'https://accounts.spotify.com/api/token', 
-    form: body
+    url: 'https://accounts.spotify.com/api/token',
+    headers: {'Authorization': 'Basic ' + (new Buffer(CLIENT_ID + ':' + CLIENT_SECRET).toString('base64'))},
+    form: body,
+    json: true
   }, (err, httpResponse, body) => {
-    res.json(body);
+    return res.json(body);
   });
 });
 
