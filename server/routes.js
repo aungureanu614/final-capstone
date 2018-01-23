@@ -1,10 +1,10 @@
 import express from 'express';
+import request from 'request';
+
+import Record from './models/record';
+import auth from './auth';
 
 const router = express.Router();
-
-const REDIRECT_URI = 'http://localhost:8080/callback';
-const CLIENT_ID = 'c8f854adc72e47de8a412d4ddbbcc351';
-const CLIENT_SECRET = 'b78a2cff9ea7439fb85fb09df8d481ee';
 
 router.post('/rating', (req, res) => {
   const options = {upsert: true, returnNewDocument: true};
@@ -32,11 +32,36 @@ router.get('/rating/:name', (req, res) => {
   });
 });
 
+// Get access token
 router.get('/login', (req, res) => {
-  const url = `https://accounts.spotify.com/authorize?response_type=code&client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`;
+  const url = `https://accounts.spotify.com/authorize?response_type=code&client_id=${auth.CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`;
   res.redirect(url);
 });
 
+// Refresh access token
+router.get('/refreshToken/:token', (req, res) => {
+  const body = {
+    grant_type: 'refresh_token',
+    refresh_token: req.params.token
+  }
+
+  const authKey = Buffer.from(`${auth.CLIENT_ID}:${auth.CLIENT_SECRET}`).toString('base64');
+
+  const headers = {
+    'Authorization': `Basic ${authKey}`
+  }
+
+  request.post({
+    url: 'https://accounts.spotify.com/api/token',
+    form: body,
+    headers: headers,
+    json: true
+  }, (error, response, body) => {
+    res.json(body);
+  });
+});
+
+// Return access token
 router.get('/callback', (req, res) => {
   const body = {
     grant_type: 'authorization_code',

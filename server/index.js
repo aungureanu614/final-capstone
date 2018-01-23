@@ -1,11 +1,9 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import request from 'request';
 import querystring from 'querystring';
 
 import { DATABASE_URL, PORT } from './config';
-import Record from './models/record';
 import routes from './routes';
 
 const app = express();
