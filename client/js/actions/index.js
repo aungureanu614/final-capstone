@@ -55,8 +55,8 @@ var getArtistId = function(artistName) {
     return function(dispatch) {
         var url = 'https://api.spotify.com/v1/search?q=' + artistName + '&type=artist';
 
-        // const headers = new Headers();
-        // headers.append('Authorization', 'Bearer BQBtevz7LumfOK4lDuEnwUMoC1aMvLi2THUdGpSZraY6_ZHe3E1Trj-rDzHJTSb5aunqoQ35gZ8mQ1nR2rVQOHNCcYUIoi9Y-Vc63ri27swttapIn9WRiQK729sSwZRyf_vHywK5-fUjnCJ6SzdO5-HqzY1DFlufHQ');
+        const headers = new Headers();
+        headers.append('Authorization', 'Bearer BQCovdFAkxYRTWdPHEMf-0az--8AMj7kVkYNXq9fq32j0WvHbKA9X4wh-8lr2tH8jZljHkcqe6vLC3H7JnHAUgWtk4wMDO4vrO9QBNyVwUB0a_u2l039LOEo1BYb0EFOD_n4yx_vprVVGuRpNNCOEwPGpJ-53oqNvw');
 
         return fetch(url).then(function(response) {
 

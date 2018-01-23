@@ -63,11 +63,27 @@ app.get('/callback', function(req, res) {
 
   request.post({
     url: 'https://accounts.spotify.com/api/token',
-    headers: {'Authorization': 'Basic ' + (new Buffer(CLIENT_ID + ':' + CLIENT_SECRET).toString('base64'))},
     form: body,
     json: true
-  }, (err, httpResponse, body) => {
-    return res.json(body);
+  }, (error, response, body) => {
+    res.json(body);
+    // let result = res.json(body);
+    //   var access_token = result.access_token,
+    //         refresh_token = result.refresh_token;
+
+    //     var options = {
+    //       url: 'https://api.spotify.com/v1/me',
+    //       headers: { 'Authorization': 'Bearer ' + access_token },
+    //       json: true
+    //     };
+
+    //     res.redirect('/#' +
+    //       querystring.stringify({
+    //         access_token: access_token,
+    //         refresh_token: refresh_token
+    //       }));
+    
+
   });
 });
 
