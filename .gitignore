@@ -3,4 +3,5 @@ node_modules
 *.log
 *.swp
 .DS_Store
-server/keys.json
+server/auth.js
+
