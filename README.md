@@ -3,7 +3,7 @@ Thinkful (https://www.thinkful.com) Final Capstone
 
 ![Screenshot](https://snag.gy/A9wZuv.jpg)
 
-##Background
+## Background
 
 This is an extension of Artist Finder. It includes the feature of being able to rate the searched artist's playlist and see an average rating based on other user's rating of the playlist. 
 
